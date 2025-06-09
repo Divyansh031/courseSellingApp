@@ -51,19 +51,28 @@ A full-stack MERN (MongoDB, Express, React, Node.js) application for selling and
 
 ---
 
-## 📁 Folder Structure
+🧪 API Endpoints Overview
 
-courseSellingApp/
-├── backend/ # Node + Express backend
-│ ├── models/ # Mongoose models
-│ ├── routes/ # API routes for user and admin
-│ ├── middlewares/ # Handle Middlewares
-│ └── controllers.js # Handle Controls
-├── frontend/ # React frontend
-│ ├── components/ # User components
-│ ├── admin/ # Admin components
-│ ├── App.jsx # Main routing
-│ └── index.css
-├── .env # Environment variables
-├── package.json
-└── README.md
+
+Users
+
+
+Method	Endpoint	Description
+POST	/signup	User registration
+POST	/login	User login
+GET	/courses	List all courses
+POST	/buy/:id	Buy a course
+GET	/purchases	List purchased items
+POST	/logout	Logout user
+
+
+Admin
+
+
+Method	Endpoint	Description
+POST	/admin/signup	Admin registration
+POST	/admin/login	Admin login
+POST	/admin/create-course	Add new course
+GET	/admin/courses	Get all courses
+PUT	/admin/update/:id	Update existing course
+POST	/admin/logout	Logout admin
