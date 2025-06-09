@@ -6,8 +6,8 @@ A full-stack MERN (MongoDB, Express, React, Node.js) application for selling and
 
 ## 🌐 Live Links
 
-- **Frontend (Vercel):** [https://course-selling-app-nine-beta.vercel.app](https://course-selling-app-nine-beta.vercel.app)
-- **Backend (Render):** [https://coursesellingapp-s1zy.onrender.com](https://coursesellingapp-s1zy.onrender.com)
+- **Website (Vercel):** [https://course-selling-app-nine-beta.vercel.app](https://course-selling-app-nine-beta.vercel.app)
+
 
 ---
 
