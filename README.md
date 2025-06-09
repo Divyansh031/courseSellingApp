@@ -54,7 +54,9 @@ A full-stack MERN (MongoDB, Express, React, Node.js) application for selling and
 🧪 API Endpoints Overview
 
 
-Users
+
+
+##Users
 
 
 Method	Endpoint	Description
@@ -78,7 +80,8 @@ GET	/purchases	List purchased items
 POST	/logout	Logout user
 
 
-Admin
+
+##Admin
 
 
 Method	Endpoint	Description
