@@ -58,11 +58,23 @@ Users
 
 
 Method	Endpoint	Description
+
+
 POST	/signup	User registration
+
+
 POST	/login	User login
+
+
 GET	/courses	List all courses
+
+
 POST	/buy/:id	Buy a course
+
+
 GET	/purchases	List purchased items
+
+
 POST	/logout	Logout user
 
 
@@ -70,9 +82,21 @@ Admin
 
 
 Method	Endpoint	Description
+
+
 POST	/admin/signup	Admin registration
+
+
 POST	/admin/login	Admin login
+
+
 POST	/admin/create-course	Add new course
+
+
 GET	/admin/courses	Get all courses
+
+
 PUT	/admin/update/:id	Update existing course
+
+
 POST	/admin/logout	Logout admin
