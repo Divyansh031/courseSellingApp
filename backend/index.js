@@ -14,6 +14,11 @@ import cors from 'cors';
 const app = express();
 dotenv.config();
 
+const allowedOrigins = [
+  "https://course-selling-app-nine-beta.vercel.app",
+  "http://localhost:5173"
+];
+
 //middleware
 app.use(express.json()); //parsing data into json
 
@@ -26,7 +31,13 @@ app.use(fileUpload({
 app.use(cookieParser());
 
 app.use(cors({
-    origin: process.env.FRONTEND_URL,
+    origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
     credentials: true,  //so we can handle cookies, CORS, authorization
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
