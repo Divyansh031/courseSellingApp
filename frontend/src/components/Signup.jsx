@@ -60,7 +60,7 @@ const Signup = () => {
         </header>
 
         {/* Signup Form */}
-        <div className="bg-gray-900 p-8 rounded-lg shadow-lg w-[500px] m-8 mt-20">
+        <div className="bg-gray-900 p-8 rounded-lg shadow-lg w-[500px] m-12 mt-20">
           <h2 className="text-2xl font-bold mb-4 text-center">
             Welcome to <span className="text-orange-500">EduNova</span>
           </h2>
