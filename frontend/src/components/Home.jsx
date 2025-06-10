@@ -13,6 +13,7 @@ import toast from "react-hot-toast";
 
 const Home = () => {
   const [courses, setCourses] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
@@ -45,13 +46,14 @@ const Home = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get(
-          `${BACKEND_URL}/course/courses`,
-          { withCredentials: true }
-        );
+        const response = await axios.get(`${BACKEND_URL}/course/courses`, {
+          withCredentials: true,
+        });
         setCourses(response.data.courses);
       } catch {
         console.log("Error in fetching courses");
+      } finally {
+        setLoading(false);
       }
     };
     fetchCourses();
@@ -131,31 +133,37 @@ const Home = () => {
         </div>
 
         <div className="mb-10 p-3">
-          <Slider {...settings}>
-            {filteredCourses.map((course) => (
-              <div key={course._id} className="p-4">
-                <div className="bg-gray-900 rounded-lg overflow-hidden shadow-md">
-                  <img
-                    src={course.image?.url || "https://via.placeholder.com/300x200?text=No+Image"}
-                    alt={course.title}
-                    className="h-48 w-full object-cover"
-                  />
-                  <div className="p-4 text-center">
-                    <h3 className="text-lg font-semibold text-white">{course.title}</h3>
-                    <button
-                      onClick={() => {
-                        isLoggedIn ? navigate(`/buy/${course._id}`) : navigate("/login");
-                        if (!isLoggedIn) toast.error("Please login to enroll in a course.");
-                      }}
-                      className="mt-4 bg-orange-500 px-4 py-2 text-white rounded hover:bg-blue-600"
-                    >
-                      Enroll Now
-                    </button>
+          {loading ? (
+            <div className="flex justify-center items-center h-40">
+              <div className="w-12 h-12 border-4 border-orange-500 border-dashed rounded-full animate-spin"></div>
+            </div>
+          ) : (
+            <Slider {...settings}>
+              {filteredCourses.map((course) => (
+                <div key={course._id} className="p-4">
+                  <div className="bg-gray-900 rounded-lg overflow-hidden shadow-md">
+                    <img
+                      src={course.image?.url || "https://via.placeholder.com/300x200?text=No+Image"}
+                      alt={course.title}
+                      className="h-48 w-full object-cover"
+                    />
+                    <div className="p-4 text-center">
+                      <h3 className="text-lg font-semibold text-white">{course.title}</h3>
+                      <button
+                        onClick={() => {
+                          isLoggedIn ? navigate(`/buy/${course._id}`) : navigate("/login");
+                          if (!isLoggedIn) toast.error("Please login to enroll in a course.");
+                        }}
+                        className="mt-4 bg-orange-500 px-4 py-2 text-white rounded hover:bg-blue-600"
+                      >
+                        Enroll Now
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </Slider>
+          )}
         </div>
 
         <hr className="border-gray-600" />
