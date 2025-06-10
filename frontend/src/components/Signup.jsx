@@ -51,16 +51,11 @@ const Signup = () => {
           <div className="flex items-center space-x-4">
             <Link
               to="/login"
-              className="bg-transparent border border-gray-500 p-1 text-sm md:text-md md:py-2 md:px-4 rounded-md hover:bg-gray-500"
+              className="bg-orange-500 border border-gray-500 p-1 text-sm md:text-md md:py-2 md:px-4 rounded-md hover:bg-orange-700"
             >
               Login
             </Link>
-            <Link
-              to="/courses"
-              className="bg-orange-500 p-1 text-sm md:text-md md:py-2 md:px-4 rounded-md hover:bg-orange-700"
-            >
-              Home
-            </Link>
+           
           </div>
         </header>
 
