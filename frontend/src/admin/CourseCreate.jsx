@@ -127,8 +127,12 @@ const CourseCreate=()=> {
         <input
           type="file"
           onChange={changePhotoHandler}
+          accept="image/jpeg,image/jpg,image/png"
           className="w-full px-4 py-2 border bg-white border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 outline-none"
         />
+        <p className="text-sm text-red-500 mt-1">
+              Supported formats: JPEG, JPG, PNG (Max: 5MB)
+        </p>
       </div>
 
       {/* Submit Button */}

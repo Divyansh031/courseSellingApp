@@ -95,15 +95,15 @@ function UpdateCourse() {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-black to-blue-950 py-10 px-4">
-      <div className="max-w-3xl mx-auto bg-white p-6 sm:p-10 border rounded-2xl shadow-xl">
-        <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-8">
+      <div className="max-w-3xl mx-auto bg-gray-900 p-6 sm:p-10 border rounded-2xl shadow-xl">
+        <h3 className="text-2xl sm:text-3xl font-bold text-center text-white mb-8">
           Update Course
         </h3>
 
         <form onSubmit={handleUpdateCourse} className="space-y-6">
           {/* Title */}
           <div>
-            <label className="block text-gray-700 text-base sm:text-lg font-medium mb-2">
+            <label className="block text-white text-base sm:text-lg font-medium mb-2">
               Title
             </label>
             <input
@@ -118,7 +118,7 @@ function UpdateCourse() {
 
           {/* Description */}
           <div>
-            <label className="block text-gray-700 text-base sm:text-lg font-medium mb-2">
+            <label className="block text-white text-base sm:text-lg font-medium mb-2">
               Description
             </label>
             <textarea
@@ -133,7 +133,7 @@ function UpdateCourse() {
 
           {/* Price */}
           <div>
-            <label className="block text-gray-700 text-base sm:text-lg font-medium mb-2">
+            <label className="block text-white text-base sm:text-lg font-medium mb-2">
               Price ($)
             </label>
             <input
@@ -150,10 +150,10 @@ function UpdateCourse() {
 
           {/* Image Preview */}
           <div>
-            <label className="block text-gray-700 text-base sm:text-lg font-medium mb-2">
+            <label className="block text-white text-base sm:text-lg font-medium mb-2">
               Course Image
             </label>
-            <div className="w-full flex justify-center mb-4">
+            <div className="text-white w-full flex justify-center mb-4">
               <img
                 src={imagePreview || "/imgPL.webp"}
                 alt="Course"
@@ -164,9 +164,9 @@ function UpdateCourse() {
               type="file"
               onChange={changePhotoHandler}
               accept="image/jpeg,image/jpg,image/png"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 outline-none"
+              className="w-full px-4 py-2 border bg-white border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 outline-none"
             />
-            <p className="text-sm text-gray-500 mt-1">
+            <p className="text-sm text-red-500 mt-1">
               Leave empty to keep current image. Supported formats: JPEG, JPG, PNG (Max: 5MB)
             </p>
           </div>
