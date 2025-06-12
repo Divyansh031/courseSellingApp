@@ -140,6 +140,15 @@ URL: http://localhost:5173
 Set env vars on host per backend’s `.env`
 
 ---
+## 📺Live Preview
+
+### For User
+https://github.com/user-attachments/assets/2f900734-5666-45a2-9998-12d9c738d7b9
+
+### For Admin
+https://github.com/user-attachments/assets/831ad0a8-f5df-4395-b788-a8ea43f59a37
+
+---
 ## 👤 Author
 **Divyansh Sharma**
 
