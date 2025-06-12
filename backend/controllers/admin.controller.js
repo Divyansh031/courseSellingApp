@@ -41,7 +41,7 @@ export const signup = async (req, res) => {
       password: hashedPassword,
     });
     await newAdmin.save();
-    res.status(201).json({ message: "Signup succeedded", newAdmin });
+    res.status(201).json({ message: "Signup successful", newAdmin });
   } catch (error) {
     res.status(500).json({ errors: "Error in signup" });
     console.log("Error in signup", error);
