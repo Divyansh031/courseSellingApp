@@ -4,7 +4,8 @@
 EduNova is a full-stack web application that allows users to browse, purchase, and manage courses. Built using the MERN stack (MongoDB, Express, React, Node.js), with user authentication and role-based access for admins and users.
 
 ---
-
+### 🌐 Live Link: https://course-selling-app-nine-beta.vercel.app
+---
 ## 🚀 Features
 
 - 🔐 JWT Authentication (Signup/Login)
