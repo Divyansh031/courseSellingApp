@@ -16,7 +16,10 @@ dotenv.config();
 
 const allowedOrigins = [
   "https://course-selling-app-nine-beta.vercel.app",
-  "http://localhost:5173"
+  "http://localhost:5173",
+  'http://127.0.0.1:5173',
+  'http://localhost:3000', // if using another frontend port
+   undefined // for tools like Postman
 ];
 
 //middleware
