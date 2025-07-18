@@ -132,6 +132,52 @@ npm run dev
 URL: http://localhost:5173
 ```
 ---
+## 🐳 Docker Setup
+This project is fully containerized using **Docker** and **docker-compose**.
+
+### 📦 Services
+#### Backend
+
+- Port: 4001
+
+- Location: /backend
+
+- Runs a Node.js + Express server
+
+
+
+#### Frontend
+
+- Port: 5173
+
+- Location: /frontend
+
+- Runs a Vite-based React app
+
+### 🚀 Quick Start with Docker
+```bash
+# Clone the repo
+git clone https://github.com/Divyansh031/courseSellingApp.git
+cd courseSellingApp
+
+# Start the containers
+docker-compose up --build
+
+```
+- Access frontend at: http://localhost:5173
+
+- Backend runs at: http://localhost:4001
+- 
+  *Make sure to configure the .env file inside the backend folder before running.*
+  
+### Images on DockerHub  
+Prebuilt Docker images for this project are available on Docker Hub:
+  
+[![Backend Image](https://img.shields.io/docker/pulls/divyanshsharma/course-backend?label=Backend%20Image)](https://hub.docker.com/repository/docker/divyanshsharma/course-backend)
+
+[![Frontend Image](https://img.shields.io/docker/pulls/divyanshsharma/course-frontend?label=Frontend%20Image)](https://hub.docker.com/repository/docker/divyanshsharma/course-frontend)
+
+---  
 
 ## ☁️Deployment
 **Frontend** on **Vercel**
